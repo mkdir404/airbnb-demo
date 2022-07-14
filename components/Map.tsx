@@ -14,7 +14,7 @@ function Map({searchResult}:any) {
         latitude: res.lat,
     }))
 
-    const center = getCenter(coordinates)    
+    const center:any = getCenter(coordinates)
     
   return (    
         <Mapbox              
