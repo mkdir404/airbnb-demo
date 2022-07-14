@@ -19,7 +19,7 @@ function Map(_a) {
         }, style: { width: 500, height: '100%' } }, searchResult.map(function (res) { return (React.createElement("div", { key: res.long },
         React.createElement(react_map_gl_1.Marker, { longitude: res.long, latitude: res.lat },
             React.createElement("p", { role: "img", className: 'cursor-pointer text-2xl animate-bounce', onClick: function () { return setSelectedLocation(res); }, "arial-label": "push-pin" }, "\uD83E\uDD81")),
-        (selectedLocation === null || selectedLocation === void 0 ? void 0 : selectedLocation.long) === res.long ? (React.createElement(react_map_gl_1.Popup, { onClose: function () { return setSelectedLocation(null); }, 
+        selectedLocation ? (React.createElement(react_map_gl_1.Popup, { onClose: function () { return setSelectedLocation(null); }, 
             //closeOnClick={true}
             longitude: res.long, latitude: res.lat },
             React.createElement("div", null,
